@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    position: absolute;
+    top: 100px;
+    font-size: 60px;
+}
+
+span {
+    color: orange;
+    text-decoration: underline;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.inner-main {
+    height: 500px;
+    /* background-color: blueviolet; */
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 130px;
+
+}
+
+.input-area {
+    /* background-color:brown; */
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input-area input {
+    height: 30px;
+    width: 300px;
+    padding: 0.8rem 0.7rem 0.8rem 1.6rem;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+}
+
+.input-area button {
+    font-size: 16px;
+    padding: 1rem 1.6rem;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    background-color: orange;
+    color: white;
+}
+
+.input-area button:hover {
+    box-shadow: 0 8px 25px orange;
+}
+
+.input-area button:active {
+    transform: scale(1.1);
+}
+
+.listboxx {
+    margin-top: 40px;
+    /* background-color: rgb(55, 61, 61); */
+    height: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow-y: auto;
+}
+
+.listboxx ul {
+    list-style-type: none;
+}
+
+.listboxx ul li {
+    margin: 1.4rem;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 5px;
+}
+
+.delete {
+    margin: 0.4rem 1.5rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 50%;
+    border: 2px solid orange;
+    background-color: transparent;
+}
+
+.delete:hover {
+    background-color: rgba(241, 164, 91, 0.281);
+}
+
+.delete:active {
+    transform: scale(1.2);
+}
+
+.fa-xmark {
+    color: orange;
+}
+
+.checkk[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 30px;
+    min-width: 30px;
+    background-color: rgba(62, 63, 62, 0.479);
+    cursor: pointer;
+    margin-right: 30px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.checkk[type="checkbox"]:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: x-large;
+    display: none;
+}
+
+.checkk[type="checkbox"]:checked {
+    background-color: #5bcd3e;
+}
+
+.checkk[type="checkbox"]:checked::after {
+    display: block;
+}
+
+li:has(.checkk:checked) {
+    text-decoration: 2px line-through white;
+    background-color: rgba(128, 128, 128, 0.151);
+}
+
+@media (max-width:500px) {
+    .input-area button {
+        padding: 1rem 1rem;
+
+    }
+
+    .input-area input {
+        height: 22px;
+        width: 186px;
+    }
+
+    .inner-main {
+        margin-top: 148px;
+    }
+
+    h1 {
+        font-size: 53px;
+    }
+}
