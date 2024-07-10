@@ -143,6 +143,7 @@ span {
     content: "\f00c";
     font-size: x-large;
     display: none;
+    color:white;
 }
 
 .checkk[type="checkbox"]:checked {
