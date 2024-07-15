@@ -3,8 +3,19 @@ let ul = document.querySelector('ul');
 let inp = document.querySelector('input');
 
 
+inp.addEventListener('keydown', function (event) {
+    let kk = event.key;
+    if (kk == "Enter") {
+        additem();
+    }
+})
 
 btn.addEventListener('click', function () {
+    additem();
+
+});
+
+function additem() {
 
     let item = document.createElement('li');
 
@@ -22,7 +33,6 @@ btn.addEventListener('click', function () {
     let iconn = document.createElement('i');
     iconn.className = "fa-solid fa-xmark";
 
-
     deleteBtn.appendChild(iconn);
     item.appendChild(checkBtn);
     item.appendChild(itemText);
@@ -30,7 +40,7 @@ btn.addEventListener('click', function () {
 
     ul.appendChild(item);
     inp.value = "";
-});
+}
 
 ul.addEventListener('click', function (event) {
     if (event.target.classList.contains('fa-xmark') || event.target.nodeName === "BUTTON") {
